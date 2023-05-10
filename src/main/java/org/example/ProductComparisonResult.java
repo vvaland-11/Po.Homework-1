@@ -11,7 +11,7 @@ public class ProductComparisonResult extends Utils{
 
         String actualMessage=getTextFromElement(By.className("no-data"));
         System.out.println("My Message: "+ actualMessage);
-        Assert.assertEquals(actualMessage,expectedProductComparisonCompletionMessage,"User can not able compare the product successfully successfully");
+        Assert.assertEquals(actualMessage,expectedProductComparisonCompletionMessage,"User can  able compare the product successfully successfully");
 
 
     }

@@ -12,7 +12,7 @@ public class CommunityVoteResult extends Utils{
 
         String actualMessage = getTextFromElement(By.xpath("//div[@id='block-poll-vote-error-1']"));
         System.out.println("My message:" + actualMessage);
-        Assert.assertEquals(actualMessage, expectedUserVoteCompletionMessage, "User is not able to vote successfully");
+        Assert.assertEquals(actualMessage, expectedUserVoteCompletionMessage, "Only registered users can vote.");
     }
     public void registeredUserOnlyCanVoteSuccessfully(){
 

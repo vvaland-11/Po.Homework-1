@@ -17,7 +17,9 @@ public class TestSuit extends BaseTest {
  AddToCartPage addToCartPage=new AddToCartPage();
  AddToCartProductResult addToCartProductResult=new AddToCartProductResult();
  LoginPage loginPage=new LoginPage();
-
+ BuildYourOwnProductPage buildYourOwnProductPage=new BuildYourOwnProductPage();
+ CheckOutPage checkOutPage=new CheckOutPage();
+FaceBookPage faceBookPage=new FaceBookPage();
 
 
 
@@ -48,6 +50,7 @@ public class TestSuit extends BaseTest {
         appleMacBookProPage.EnterEmailDetails();
         emailFriendResult.EmaailaFriendCompletionMessage();
     }
+
     @Test
     public void toVerifyUserShouldBeAbleToCompareTheProductSuccessfully(){
       //click on HtcOne android comparison option
@@ -61,6 +64,7 @@ public class TestSuit extends BaseTest {
 
 
     }
+
     @Test
     public void  toVerifyUserShouldBeAblToAddProductToTheAddToCartSuccessfully(){
         //click electronics
@@ -74,8 +78,9 @@ public class TestSuit extends BaseTest {
         //add to cart completion message
         addToCartProductResult.AddToCartProductCompletionMessage();
     }
+
     @Test
-    public void toVerifyUserShouldBeAbleToReferToAFriendSuccessfully(){
+    public void toVerifyRegisterUserShouldBeAbleToReferToAFriendSuccessfully(){
         // Open register page and fill all mandatory details in register form
         registerPage.enterRegistrationDetails();
         // Open Login Page and enter the details
@@ -84,8 +89,9 @@ public class TestSuit extends BaseTest {
         emailFriendResult.RegisteredUserIsAbleToEmailFriendComplete();
 
     }
+
     @Test
-    public void toVerifyUserShouldBeAbleToVote(){
+    public void toVerifyRegisterUserShouldBeAbleToVote(){
         // Open register page and fill all mandatory details in register form
         registerPage.enterRegistrationDetails();
         // Open Login Page
@@ -94,7 +100,55 @@ public class TestSuit extends BaseTest {
         homePage.ClickOnGoodOption();
         homePage.ClickOnVoteButton();
         communityVoteResult.registeredUserOnlyCanVoteSuccessfully();
+    }
 
+    @Test
+    public void toVerifyPrintoutProductTitle(){
+        homePage.PrintoutProductTitle();
+    }
+
+    @Test
+    public void toVerifyUserCanClickOnSearchButtonAndSeetheErrorMessage(){
+        homePage.SearchButton();
+    }
+
+
+    @Test
+    public void toVerifyUserShouldAbleToSelectAndVerifyCurrencyAccordingly(){
+         homePage.CurrencySelector();
+    }
+
+
+    @Test
+    public void toVerifyUserShouldBeAbleToSearchForTheGivenProductSuccessfully(){
+        homePage.EnterTextInSearchButton();
+    }
+
+    @Test
+    public void toVerifyUserShouldBeAbleToEnterCommentsOnNopCommerceNewReleaseSuccessfully(){
+       homePage.EnterCommentsOnNopCommerceNewRelease();
+    }
+    @Test
+    public void toVerifyUserShouldBeAbleToCustomiseTheProductAndAddToCartSuccessfully(){
+     buildYourOwnProductPage.customisedItem();
+    }
+
+    @Test
+    public void toVerifyUserShouldBeAbleToCheckOutSuccessfully(){
+      checkOutPage.UserCanAbleToCheckOutSuccessfully();
 
     }
+
+    @Test
+    public void toVerifyUserShouldBeAbleToClickOnVoteButtonAndSeeTheErrorMessage(){
+     homePage.CommunityPoleVoteButton();
+
+    }
+    @Test
+    public void toVerifyUSerShouldBeAbleToOPrnTheNewTabSuccessfully(){
+      homePage.FaceBookTab();
+      faceBookPage.facebook();
+    }
+
+
 }
